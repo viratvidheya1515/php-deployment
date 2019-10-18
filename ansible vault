@@ -1,0 +1,22 @@
+Ansible vault is feature which is given by ansible, which will allow us to encrypt our files or variable files.
+If we want to hide something like confidential file from others we can use this feature.
+
+# ansible-vault create phpdelpoyment.yml   
+this command to create vault,it will ask passwd.
+this file noe encrypted we can not view it. If we want to view that, following command we need give.
+
+#ansible-vault edit phpdeployment.yml
+
+#ansible-vault decrypt phpdeployment.yml
+to decrypt the file.
+
+If we want to encrypt again, we need to execute the following command
+#ansible-vault encrypt phpdeployment.yml
+
+we can not run a playbook in encrypted format, if we want to run the playbook in encryped format
+#ansible-playbook phpdepolyment --ask-vault-pass
+passwd:......
+confirm passwd: .......
+
+now we can that play book.
+
